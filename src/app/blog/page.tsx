@@ -90,7 +90,7 @@ export default function BlogPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(225, 244, 254)" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -116,7 +116,7 @@ export default function BlogPage() {
         <section className="ow-sec !pt-12">
           <div className="ow-wrap">
             {/* Featured Article */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="ow-card ow-lift grid gap-8 p-7 md:grid-cols-2 md:p-9">
                 <div className="flex flex-col justify-center">
                   <span className="ow-chip w-fit">Road signs</span>
@@ -149,10 +149,7 @@ export default function BlogPage() {
               {otherArticles.map((art) => {
                 const Icon = art.icon;
                 return (
-                  <div
-                    key={art.slug}
-                    style={{ opacity: 1, transform: "none" }}
-                  >
+                  <div key={art.slug}>
                     <Link
                       className="ow-card ow-lift flex h-full flex-col p-6"
                       href="/blog"

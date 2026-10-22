@@ -47,7 +47,7 @@ export default function FeaturesPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -78,7 +78,7 @@ export default function FeaturesPage() {
           style={{ background: "rgb(225, 244, 254)" }}
         >
           <div className="ow-wrap grid items-center gap-14 lg:grid-cols-2">
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <span
                 className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-widest"
                 style={{
@@ -135,7 +135,6 @@ export default function FeaturesPage() {
 
             <div
               className="flex justify-center"
-              style={{ opacity: 1, transform: "none" }}
             >
               <div
                 className={`ow-phone ${isScenePaused ? "ow-paused" : ""}`}
@@ -331,7 +330,7 @@ export default function FeaturesPage() {
           style={{ background: "rgb(251, 253, 246)" }}
         >
           <div className="ow-wrap grid items-center gap-14 lg:grid-cols-2">
-            <div className="lg:order-2" style={{ opacity: 1, transform: "none" }}>
+            <div className="lg:order-2">
               <span
                 className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-widest"
                 style={{
@@ -387,7 +386,6 @@ export default function FeaturesPage() {
 
             <div
               className="flex justify-center lg:order-1"
-              style={{ opacity: 1, transform: "none" }}
             >
               <div
                 className="ow-phone"
@@ -494,7 +492,7 @@ export default function FeaturesPage() {
           style={{ background: "rgb(239, 227, 248)" }}
         >
           <div className="ow-wrap grid items-center gap-14 lg:grid-cols-2">
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <span
                 className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-widest"
                 style={{
@@ -550,7 +548,6 @@ export default function FeaturesPage() {
 
             <div
               className="flex justify-center"
-              style={{ opacity: 1, transform: "none" }}
             >
               <div
                 className="ow-phone"
@@ -669,7 +666,7 @@ export default function FeaturesPage() {
           style={{ background: "rgb(251, 253, 246)" }}
         >
           <div className="ow-wrap grid items-center gap-14 lg:grid-cols-2">
-            <div className="lg:order-2" style={{ opacity: 1, transform: "none" }}>
+            <div className="lg:order-2">
               <span
                 className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-widest"
                 style={{
@@ -724,7 +721,6 @@ export default function FeaturesPage() {
 
             <div
               className="flex justify-center lg:order-1"
-              style={{ opacity: 1, transform: "none" }}
             >
               <div
                 className="ow-phone"
@@ -842,7 +838,7 @@ export default function FeaturesPage() {
           style={{ background: "rgb(255, 245, 204)" }}
         >
           <div className="ow-wrap grid items-center gap-14 lg:grid-cols-2">
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <span
                 className="mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-widest"
                 style={{
@@ -896,7 +892,6 @@ export default function FeaturesPage() {
 
             <div
               className="flex justify-center"
-              style={{ opacity: 1, transform: "none" }}
             >
               <div
                 className="ow-phone"
@@ -1021,7 +1016,7 @@ export default function FeaturesPage() {
         {/* 6. How it works */}
         <section id="how" className="ow-sec scroll-mt-[72px] bg-[#EAF8D6]">
           <div className="ow-wrap">
-            <div className="max-w-3xl" style={{ opacity: 1, transform: "none" }}>
+            <div className="max-w-3xl">
               <span className="ow-label">How it works</span>
               <h2 className="ow-h2 font-[Fredoka] font-bold text-[#12261A]">
                 From download to driving test in{" "}
@@ -1031,7 +1026,7 @@ export default function FeaturesPage() {
             </div>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="grid h-12 w-12 place-items-center rounded-full font-[Fredoka] text-2xl font-bold"
@@ -1053,7 +1048,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="grid h-12 w-12 place-items-center rounded-full font-[Fredoka] text-2xl font-bold"
@@ -1075,7 +1070,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="grid h-12 w-12 place-items-center rounded-full font-[Fredoka] text-2xl font-bold"
@@ -1097,7 +1092,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="grid h-12 w-12 place-items-center rounded-full font-[Fredoka] text-2xl font-bold"
@@ -1125,7 +1120,7 @@ export default function FeaturesPage() {
         {/* 7. Everything in one app */}
         <section className="ow-sec">
           <div className="ow-wrap">
-            <div className="max-w-3xl" style={{ opacity: 1, transform: "none" }}>
+            <div className="max-w-3xl">
               <span className="ow-label">Everything in one app</span>
               <h2 className="ow-h2 font-[Fredoka] font-bold text-[#12261A]">
                 All you need to pass first time.
@@ -1138,7 +1133,7 @@ export default function FeaturesPage() {
                 gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
               }}
             >
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1159,7 +1154,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1180,7 +1175,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1201,7 +1196,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1221,7 +1216,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1242,7 +1237,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1262,7 +1257,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1283,7 +1278,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="ow-card ow-lift h-full p-6">
                   <div
                     className="ow-tile"
@@ -1346,3 +1341,4 @@ export default function FeaturesPage() {
     </div>
   );
 }
+

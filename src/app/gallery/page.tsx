@@ -31,17 +31,17 @@ export const metadata: Metadata = {
 
 const galleryImages = [
   {
-    src: "https://media.base44.com/images/public/6ad477b1d3ebf3d881f5916d/562bd4cf9_generated_image.png",
+    src: "/gallery/pass-1.png",
     caption: "First licence in hand",
     tag: "Celebration",
   },
   {
-    src: "https://media.base44.com/images/public/6ad477b1d3ebf3d881f5916d/a0b66de53_generated_image.png",
+    src: "/gallery/pass-2.png",
     caption: "Thumbs up, test passed",
     tag: "Behind the wheel",
   },
   {
-    src: "https://media.base44.com/images/public/6ad477b1d3ebf3d881f5916d/3afe9bd9d_generated_image.png",
+    src: "/gallery/pass-3.png",
     caption: "Celebrating with friends",
     tag: "Pass day",
   },
@@ -58,7 +58,7 @@ export default function GalleryPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -89,26 +89,17 @@ export default function GalleryPage() {
             <h2 className="mb-6 text-[26px]">Happy learners, passed tests</h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {galleryImages.map((img) => (
-                <div
-                  key={img.caption}
-                  style={{ opacity: 1, transform: "none" }}
-                >
+                <div key={img.caption}>
                   <figure className="ow-card ow-lift overflow-hidden">
                     <div className="aspect-[4/3] w-full overflow-hidden">
-                      <span
-                        className="inline-block relative h-full w-full"
-                        data-base44-image=""
-                        data-base44-image-src={img.src}
-                      >
-                        <span className="block relative w-full h-full overflow-hidden">
-                          <img
-                            src={img.src}
-                            loading="lazy"
-                            className="w-full h-full inset-0 absolute object-cover"
-                            alt={img.caption}
-                          />
-                        </span>
-                      </span>
+                      <div className="relative h-full w-full overflow-hidden">
+                        <img
+                          src={img.src}
+                          loading="lazy"
+                          className="w-full h-full inset-0 absolute object-cover"
+                          alt={img.caption}
+                        />
+                      </div>
                     </div>
                     <figcaption className="flex items-center justify-between p-4">
                       <span className="font-bold text-[#12261A]">
@@ -127,10 +118,7 @@ export default function GalleryPage() {
             <h2 className="mb-6 mt-14 text-[26px]">Inside the app</h2>
             <div className="grid gap-8 lg:grid-cols-3">
               {/* Phone 1: The learning path */}
-              <div
-                className="flex flex-col items-center"
-                style={{ opacity: 1, transform: "none" }}
-              >
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"
@@ -309,10 +297,7 @@ export default function GalleryPage() {
               </div>
 
               {/* Phone 2: Animated junction scene */}
-              <div
-                className="flex flex-col items-center"
-                style={{ opacity: 1, transform: "none" }}
-              >
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"
@@ -497,10 +482,7 @@ export default function GalleryPage() {
               </div>
 
               {/* Phone 3: Practice question screen */}
-              <div
-                className="flex flex-col items-center"
-                style={{ opacity: 1, transform: "none" }}
-              >
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"

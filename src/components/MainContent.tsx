@@ -28,7 +28,7 @@ import {
 import { Reveal } from "./Reveal";
 import { WhizzyMascot } from "./WhizzyMascot";
 
-// Country data matching base44
+// Supported countries data
 const COUNTRIES = [
   {
     slug: "uk",

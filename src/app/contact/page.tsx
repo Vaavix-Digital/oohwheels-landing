@@ -50,7 +50,7 @@ export default function ContactPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "#E1F4FE" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"

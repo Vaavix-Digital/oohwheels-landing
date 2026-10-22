@@ -493,7 +493,7 @@ export default function AppGuidePage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(225, 244, 254)" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -519,7 +519,7 @@ export default function AppGuidePage() {
         <section className="ow-sec !pt-12">
           <div className="ow-wrap space-y-16">
             {/* Step 1 */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="grid items-center gap-10 lg:grid-cols-2">
                 <div>
                   <div
@@ -544,7 +544,7 @@ export default function AppGuidePage() {
             </div>
 
             {/* Step 2 */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="grid items-center gap-10 lg:grid-cols-2">
                 <div className="lg:order-2">
                   <div
@@ -569,7 +569,7 @@ export default function AppGuidePage() {
             </div>
 
             {/* Step 3 */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="grid items-center gap-10 lg:grid-cols-2">
                 <div>
                   <div
@@ -594,7 +594,7 @@ export default function AppGuidePage() {
             </div>
 
             {/* Step 4 */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="grid items-center gap-10 lg:grid-cols-2">
                 <div className="lg:order-2">
                   <div
@@ -619,7 +619,7 @@ export default function AppGuidePage() {
             </div>
 
             {/* Step 5 */}
-            <div style={{ opacity: 1, transform: "none" }}>
+            <div>
               <div className="grid items-center gap-10 lg:grid-cols-2">
                 <div>
                   <div

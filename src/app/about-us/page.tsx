@@ -59,7 +59,7 @@ export default function AboutUsPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "#EAF8D6" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -109,7 +109,7 @@ export default function AboutUsPage() {
         <section className="bg-[#EAF8D6] py-16">
           <div className="ow-wrap">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="text-center">
                   <div
                     className="font-[Fredoka] text-4xl font-bold text-[#58CC02] md:text-5xl"
@@ -123,7 +123,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="text-center">
                   <div
                     className="font-[Fredoka] text-4xl font-bold text-[#58CC02] md:text-5xl"
@@ -137,7 +137,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="text-center">
                   <div
                     className="font-[Fredoka] text-4xl font-bold text-[#58CC02] md:text-5xl"
@@ -151,7 +151,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
 
-              <div style={{ opacity: 1, transform: "none" }}>
+              <div>
                 <div className="text-center">
                   <div
                     className="font-[Fredoka] text-4xl font-bold text-[#58CC02] md:text-5xl"
