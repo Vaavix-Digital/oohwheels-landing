@@ -13,6 +13,8 @@ import {
   Mail,
   Smartphone,
 } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
+import { AnimatePresence, motion } from "framer-motion";
 
 export interface FaqItem {
   topic: string;
@@ -151,7 +153,7 @@ export default function HelpPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap" style={{ opacity: 1, transform: "none" }}>
+          <Reveal className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -172,7 +174,7 @@ export default function HelpPage() {
             <p className="ow-lead mt-4 max-w-2xl text-[#2B3A33]">
               Search the help centre or pick a topic.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* Main Section */}
@@ -269,13 +271,21 @@ export default function HelpPage() {
                           </button>
                         </h3>
 
-                        {isOpen && (
-                          <div className="overflow-hidden animate-in fade-in duration-200">
-                            <p className="px-5 pb-5 text-[16px] leading-relaxed text-[#2B3A33]">
-                              {faq.a}
-                            </p>
-                          </div>
-                        )}
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="overflow-hidden"
+                            >
+                              <p className="px-5 pb-5 text-[16px] leading-relaxed text-[#2B3A33]">
+                                {faq.a}
+                              </p>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                     );
                   })
