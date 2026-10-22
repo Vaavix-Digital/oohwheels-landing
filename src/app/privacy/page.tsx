@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
+import { Reveal } from "@/components/Reveal";
 import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -113,7 +114,7 @@ export default function PrivacyPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap">
+          <Reveal className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -129,7 +130,7 @@ export default function PrivacyPage() {
             <span className="ow-label">Legal</span>
             <h1 className="ow-h1s max-w-3xl">Privacy policy</h1>
             <span className="ow-chip mt-5">Last updated: October 18, 2026</span>
-          </div>
+          </Reveal>
         </section>
 
         {/* Content Section */}

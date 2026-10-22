@@ -38,8 +38,8 @@ main, #main {
   position: relative;
 }
 
-/* Force hidden utility precedence */
-.hidden, [hidden] {
+/* HTML hidden attribute */
+[hidden] {
   display: none !important;
 }
 
@@ -112,8 +112,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1024px) {
   .ow-wrap {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -137,9 +137,9 @@ h1, h2, h3, h4, h5, h6 {
 .ow-h1 {
   font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
   letter-spacing: -0.02em;
-  font-size: clamp(40px, 4.8vw, 62px);
+  font-size: clamp(40px, 6vw, 72px);
   font-weight: 700 !important;
-  line-height: 1.05;
+  line-height: 1.02;
   color: #12261A;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -655,3 +655,84 @@ a.ow-card:hover,
   list-style: disc outside;
   margin-bottom: 16px;
 }
+
+/* Scrollbar utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3.2s ease-in-out infinite;
+}
+
+/* Animation utilities for Tailwind v4 */
+.animate-in {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: owFadeIn;
+}
+
+@keyframes owFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-from-top-2 {
+  animation-name: owSlideTop2;
+}
+
+@keyframes owSlideTop2 {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-from-bottom-2 {
+  animation-name: owSlideBottom2;
+}
+
+@keyframes owSlideBottom2 {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+

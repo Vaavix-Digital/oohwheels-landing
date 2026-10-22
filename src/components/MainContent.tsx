@@ -24,6 +24,11 @@ import {
   Minus,
   Plus,
   Zap,
+  Lock,
+  House,
+  Dumbbell,
+  BookOpen,
+  User,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { WhizzyMascot } from "./WhizzyMascot";
@@ -294,9 +299,7 @@ export const MainContent: React.FC = () => {
               Driving theory, the fun way
             </motion.span>
             <motion.h1 {...heroAnim(0.1)} className="ow-h1 mt-6">
-              Pass your driving test{" "}
-              <br className="hidden lg:inline" />
-              without the boring bits.
+              Pass your driving test without the boring bits.
             </motion.h1>
             <motion.p {...heroAnim(0.2)} className="ow-lead mt-6 max-w-xl">
               oohwheels turns the rules of the road into short game-like
@@ -304,12 +307,12 @@ export const MainContent: React.FC = () => {
               your exact licensing authority.
             </motion.p>
             <motion.div {...heroAnim(0.3)} className="mt-8">
-              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <div className="flex flex-wrap gap-4">
                 <a
                   href="https://www.apple.com/app-store/"
                   target="_blank"
                   rel="noreferrer"
-                  className="ow-btn ow-green !w-auto"
+                  className="ow-btn ow-green"
                 >
                   <Smartphone className="h-5 w-5 stroke-[2.5]" />
                   Get it on iPhone
@@ -318,7 +321,7 @@ export const MainContent: React.FC = () => {
                   href="https://play.google.com/store"
                   target="_blank"
                   rel="noreferrer"
-                  className="ow-btn ow-ink !w-auto"
+                  className="ow-btn ow-ink"
                 >
                   <Smartphone className="h-5 w-5 stroke-[2.5]" />
                   Get it on Android
@@ -332,12 +335,12 @@ export const MainContent: React.FC = () => {
           </div>
 
           <div
-            className="relative mx-auto flex w-full max-w-[340px] sm:max-w-[460px] justify-center pb-4"
+            className="relative mx-auto flex w-full max-w-[460px] justify-center pb-4"
             onMouseEnter={() => setIsHeroPaused(true)}
             onMouseLeave={() => setIsHeroPaused(false)}
           >
             <div
-              className="absolute left-1/2 top-10 -z-0 h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] -translate-x-1/2 rounded-full bg-[#CFE8B0]/60 pointer-events-none"
+              className="absolute left-1/2 top-10 -z-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#CFE8B0]/60 pointer-events-none"
               aria-hidden="true"
             />
             <div className="relative z-10">
@@ -464,55 +467,87 @@ export const MainContent: React.FC = () => {
                                 </div>
                               </div>
                               <div className="mt-5 flex flex-col items-center gap-3">
-                                {[
-                                  { s: "done", x: 0 },
-                                  { s: "current", x: -28 },
-                                  { s: "locked", x: 24 },
-                                  { s: "locked", x: 0 },
-                                ].map((node, i) => (
+                                <div className="relative" style={{ transform: "translateX(0px)" }}>
                                   <div
-                                    key={i}
-                                    className="relative"
+                                    className="grid h-[54px] w-[54px] place-items-center rounded-full text-[#12261A]"
                                     style={{
-                                      transform: `translateX(${node.x}px)`,
+                                      background: "rgb(88, 204, 2)",
+                                      boxShadow: "0 5px 0 rgb(63, 148, 0)",
                                     }}
                                   >
-                                    {node.s === "current" && (
-                                      <div className="ow-bob absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-xl border-2 border-[#E3EDD6] bg-white px-2.5 py-0.5 text-[11px] font-extrabold text-[#12261A]">
-                                        START
-                                      </div>
-                                    )}
-                                    <div
-                                      className="grid h-14 w-14 place-items-center rounded-full text-white"
-                                      style={{
-                                        background:
-                                          node.s === "done"
-                                            ? "#58CC02"
-                                            : node.s === "current"
-                                            ? "#FFC800"
-                                            : "#E5E5E5",
-                                        boxShadow:
-                                          node.s === "done"
-                                            ? "0 4px 0 #3F9400"
-                                            : node.s === "current"
-                                            ? "0 4px 0 #D19F00"
-                                            : "0 4px 0 #CCC",
-                                        color:
-                                          node.s === "locked"
-                                            ? "#999"
-                                            : "#12261A",
-                                      }}
-                                    >
-                                      {node.s === "done" ? (
-                                        <Check className="h-6 w-6 stroke-[3]" />
-                                      ) : node.s === "current" ? (
-                                        <Flame className="h-6 w-6 fill-current" />
-                                      ) : (
-                                        <Route className="h-6 w-6 stroke-[2.5]" />
-                                      )}
-                                    </div>
+                                    <Check className="h-6 w-6 stroke-[3]" />
                                   </div>
-                                ))}
+                                </div>
+                                <div className="relative" style={{ transform: "translateX(-34px)" }}>
+                                  <div
+                                    className="grid h-[54px] w-[54px] place-items-center rounded-full text-[#12261A]"
+                                    style={{
+                                      background: "rgb(88, 204, 2)",
+                                      boxShadow: "0 5px 0 rgb(63, 148, 0)",
+                                    }}
+                                  >
+                                    <Check className="h-6 w-6 stroke-[3]" />
+                                  </div>
+                                </div>
+                                <div className="relative" style={{ transform: "translateX(0px)" }}>
+                                  <div className="ow-bob absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-xl border-2 border-[#E3EDD6] bg-white px-2.5 py-0.5 text-[11px] font-extrabold text-[#12261A]">
+                                    START
+                                  </div>
+                                  <div
+                                    className="grid h-[54px] w-[54px] place-items-center rounded-full text-[#12261A]"
+                                    style={{
+                                      background: "rgb(255, 200, 0)",
+                                      boxShadow: "0 5px 0 rgb(209, 159, 0)",
+                                    }}
+                                  >
+                                    <Play className="h-6 w-6 fill-[#12261A] stroke-none ml-0.5" />
+                                  </div>
+                                </div>
+                                <div className="relative" style={{ transform: "translateX(34px)" }}>
+                                  <div
+                                    className="grid h-[54px] w-[54px] place-items-center rounded-full text-[#12261A]"
+                                    style={{
+                                      background: "rgb(229, 229, 229)",
+                                      boxShadow: "0 5px 0 rgb(201, 201, 201)",
+                                    }}
+                                  >
+                                    <Lock className="h-5 w-5 stroke-[2.6] text-[#8a8a8a]" />
+                                  </div>
+                                </div>
+                                <div className="relative" style={{ transform: "translateX(0px)" }}>
+                                  <div
+                                    className="grid h-[54px] w-[54px] place-items-center rounded-full text-[#12261A]"
+                                    style={{
+                                      background: "rgb(229, 229, 229)",
+                                      boxShadow: "0 5px 0 rgb(201, 201, 201)",
+                                    }}
+                                  >
+                                    <Lock className="h-5 w-5 stroke-[2.6] text-[#8a8a8a]" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="absolute inset-x-0 bottom-0 flex justify-around border-t-2 border-[#E3EDD6] bg-white px-2 py-2.5">
+                                <span
+                                  className="grid h-9 w-11 place-items-center rounded-xl"
+                                  style={{
+                                    background: "rgb(234, 248, 214)",
+                                    border: "2px solid rgb(88, 204, 2)",
+                                  }}
+                                >
+                                  <House size={20} strokeWidth={2.4} color="#12261A" />
+                                </span>
+                                <span className="grid h-9 w-11 place-items-center rounded-xl">
+                                  <Dumbbell size={20} strokeWidth={2.4} color="#12261A" />
+                                </span>
+                                <span className="grid h-9 w-11 place-items-center rounded-xl">
+                                  <Trophy size={20} strokeWidth={2.4} color="#12261A" />
+                                </span>
+                                <span className="grid h-9 w-11 place-items-center rounded-xl">
+                                  <BookOpen size={20} strokeWidth={2.4} color="#12261A" />
+                                </span>
+                                <span className="grid h-9 w-11 place-items-center rounded-xl">
+                                  <User size={20} strokeWidth={2.4} color="#12261A" />
+                                </span>
                               </div>
                             </>
                           ) : activeTab === 1 ? (
@@ -720,7 +755,7 @@ export const MainContent: React.FC = () => {
 
             {/* +10 XP Chip */}
             <div
-              className="ow-bob ow-chip absolute right-1 top-16 z-20 !border-[#D19F00] !bg-[#FFC800] sm:-right-2"
+              className="ow-bob ow-chip absolute right-0 top-16 z-20 !border-[#D19F00] !bg-[#FFC800] sm:-right-2"
               style={
                 {
                   "--edge": "#D19F00",
@@ -733,7 +768,7 @@ export const MainContent: React.FC = () => {
 
             {/* 5 day streak Chip */}
             <div
-              className="ow-bob ow-chip absolute bottom-40 right-1 z-20 sm:-right-4"
+              className="ow-bob ow-chip absolute bottom-40 right-0 z-20 sm:-right-4"
               style={
                 {
                   "--r": "5deg",
@@ -747,7 +782,7 @@ export const MainContent: React.FC = () => {
 
             {/* Mascot Whizzy */}
             <div
-              className="ow-bob absolute -bottom-2 left-1 sm:left-0 z-20"
+              className="ow-bob absolute -bottom-2 left-0 z-20"
               style={{ animationDelay: "-0.6s" }}
             >
               <WhizzyMascot size={104} mood="wave" />
