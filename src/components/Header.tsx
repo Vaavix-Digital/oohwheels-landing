@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { WhizzyMascot } from "./WhizzyMascot";
+import { AppNotificationBar } from "./AppNotificationBar";
 
 const navItems = [
   { label: "Features", href: "/features" },
@@ -87,6 +88,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-[#E3EDD6] bg-[#FBFDF6]/90 backdrop-blur transition-all">
+      <AppNotificationBar />
       <div className="ow-wrap flex h-[72px] items-center justify-between">
         {/* Brand & Mascot */}
         <Link
