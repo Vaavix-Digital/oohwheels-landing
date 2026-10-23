@@ -51,7 +51,7 @@ export default function CountryDetailClient({ country }: Props) {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: country.tone.bg }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -98,7 +98,7 @@ export default function CountryDetailClient({ country }: Props) {
                 </span>
               ))}
             </div>
-          </Reveal>
+          </div>
         </section>
 
         {/* What the test looks like */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 interface RevealProps {
@@ -15,21 +15,33 @@ interface RevealProps {
 export const Reveal: React.FC<RevealProps> = ({
   children,
   delay = 0,
-  y = 24,
+  y = 20,
   x = 0,
   className = "",
   as = "div",
 }) => {
   const shouldReduce = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const Component = (motion[as as keyof typeof motion] || motion.div) as any;
+
+  // On SSR, before mount, or with reduced motion: render clean HTML that is 100% visible
+  if (!mounted || shouldReduce) {
+    const Tag = as as any;
+    return <Tag className={className}>{children}</Tag>;
+  }
 
   return (
     <Component
       className={className}
-      initial={shouldReduce ? false : { opacity: 0, y, x }}
+      initial={{ opacity: 0, y, x }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, amount: "some" }}
-      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] as const }}
+      viewport={{ once: true, margin: "0px", amount: 0.05 }}
+      transition={{ duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] as const }}
     >
       {children}
     </Component>

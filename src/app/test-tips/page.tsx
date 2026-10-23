@@ -101,7 +101,7 @@ export default function TestTipsPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(255, 245, 204)" }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -122,7 +122,7 @@ export default function TestTipsPage() {
               The tips that work and the traps that catch people out, from
               learners who have been there.
             </p>
-          </Reveal>
+          </div>
         </section>
 
         {/* Do This Section */}

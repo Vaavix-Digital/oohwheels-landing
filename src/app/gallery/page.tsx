@@ -21,7 +21,6 @@ import {
   Pause,
   ArrowUp,
 } from "lucide-react";
-import { Reveal } from "@/components/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -59,7 +58,7 @@ export default function GalleryPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -80,21 +79,19 @@ export default function GalleryPage() {
               A look at the people who passed and the screens that got them
               there.
             </p>
-          </Reveal>
+          </div>
         </section>
 
         {/* Gallery Section */}
         <section className="ow-sec !pt-12">
           <div className="ow-wrap">
             {/* Happy learners, passed tests */}
-            <Reveal>
-              <h2 className="mb-6 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
-                Happy learners, passed tests
-              </h2>
-            </Reveal>
+            <h2 className="mb-6 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
+              Happy learners, passed tests
+            </h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {galleryImages.map((img, idx) => (
-                <Reveal key={img.caption} delay={(idx % 3) * 0.08}>
+              {galleryImages.map((img) => (
+                <div key={img.caption}>
                   <figure className="ow-card ow-lift overflow-hidden">
                     <div className="aspect-[4/3] w-full overflow-hidden">
                       <div className="relative h-full w-full overflow-hidden">
@@ -115,19 +112,17 @@ export default function GalleryPage() {
                       </span>
                     </figcaption>
                   </figure>
-                </Reveal>
+                </div>
               ))}
             </div>
 
             {/* Inside the app */}
-            <Reveal>
-              <h2 className="mb-6 mt-14 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
-                Inside the app
-              </h2>
-            </Reveal>
+            <h2 className="mb-6 mt-14 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
+              Inside the app
+            </h2>
             <div className="grid gap-8 lg:grid-cols-3">
               {/* Phone 1: The learning path */}
-              <Reveal delay={0} className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"
@@ -303,10 +298,10 @@ export default function GalleryPage() {
                 <span className="ow-chip !px-3 !py-1 !text-xs mt-2">
                   App interface
                 </span>
-              </Reveal>
+              </div>
 
               {/* Phone 2: Animated junction scene */}
-              <Reveal delay={0.12} className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"
@@ -488,10 +483,10 @@ export default function GalleryPage() {
                 <span className="ow-chip !px-3 !py-1 !text-xs mt-2">
                   App interface
                 </span>
-              </Reveal>
+              </div>
 
               {/* Phone 3: Practice question screen */}
-              <Reveal delay={0.24} className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <div
                   className="ow-phone"
                   role="group"
@@ -582,7 +577,7 @@ export default function GalleryPage() {
                 <span className="ow-chip !px-3 !py-1 !text-xs mt-2">
                   App interface
                 </span>
-              </Reveal>
+              </div>
             </div>
           </div>
         </section>
