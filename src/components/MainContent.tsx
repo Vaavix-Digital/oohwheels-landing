@@ -272,41 +272,26 @@ export const MainContent: React.FC = () => {
   // Scene animation paused state in Zig-zag section
   const [isScenePaused, setIsScenePaused] = useState<boolean>(false);
 
-  // Hero entrance animation generator
-  const heroAnim = (delay: number) =>
-    shouldReduceMotion
-      ? {}
-      : {
-          initial: { opacity: 0, y: 24 },
-          animate: { opacity: 1, y: 0 },
-          transition: {
-            duration: 0.6,
-            delay,
-            ease: [0.22, 1, 0.36, 1] as const,
-          },
-        };
-
   return (
     <main id="main">
       {/* Hero Section */}
       <section className="overflow-hidden bg-gradient-to-b from-[#FBFDF6] to-[#EAF8D6] pb-20 pt-12 md:pt-16">
         <div className="ow-wrap grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <motion.span
-              {...heroAnim(0)}
-              className="ow-chip !text-[13px] font-extrabold uppercase tracking-widest inline-block"
+            <span
+              className="ow-chip !text-[13px] font-extrabold uppercase tracking-widest inline-block ow-hero-fade"
             >
               Driving theory, the fun way
-            </motion.span>
-            <motion.h1 {...heroAnim(0.1)} className="ow-h1 mt-6">
+            </span>
+            <h1 className="ow-h1 mt-6 ow-hero-fade ow-hero-fade-1">
               Pass your driving test without the boring bits.
-            </motion.h1>
-            <motion.p {...heroAnim(0.2)} className="ow-lead mt-6 max-w-xl">
+            </h1>
+            <p className="ow-lead mt-6 max-w-xl ow-hero-fade ow-hero-fade-2">
               oohwheels turns the rules of the road into short game-like
               lessons, animated scenes and mock tests, in your language and for
               your exact licensing authority.
-            </motion.p>
-            <motion.div {...heroAnim(0.3)} className="mt-8">
+            </p>
+            <div className="mt-8 ow-hero-fade ow-hero-fade-3">
               <div className="flex flex-wrap gap-4">
                 <a
                   href="https://www.apple.com/app-store/"
@@ -327,11 +312,11 @@ export const MainContent: React.FC = () => {
                   Get it on Android
                 </a>
               </div>
-            </motion.div>
-            <motion.p {...heroAnim(0.4)} className="ow-muted mt-5 max-w-md">
+            </div>
+            <p className="ow-muted mt-5 max-w-md ow-hero-fade ow-hero-fade-3">
               Launching soon on iOS and Android. Free to start. Premium is $3.99 a
               month, cancel anytime.
-            </motion.p>
+            </p>
           </div>
 
           <div

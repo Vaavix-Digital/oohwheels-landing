@@ -86,7 +86,9 @@ export default function GalleryPage() {
         <section className="ow-sec !pt-12">
           <div className="ow-wrap">
             {/* Happy learners, passed tests */}
-            <h2 className="mb-6 text-[26px]">Happy learners, passed tests</h2>
+            <h2 className="mb-6 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
+              Happy learners, passed tests
+            </h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {galleryImages.map((img) => (
                 <div key={img.caption}>
@@ -115,7 +117,9 @@ export default function GalleryPage() {
             </div>
 
             {/* Inside the app */}
-            <h2 className="mb-6 mt-14 text-[26px]">Inside the app</h2>
+            <h2 className="mb-6 mt-14 font-[Fredoka] text-2xl font-bold tracking-tight text-[#12261A] sm:text-[28px]">
+              Inside the app
+            </h2>
             <div className="grid gap-8 lg:grid-cols-3">
               {/* Phone 1: The learning path */}
               <div className="flex flex-col items-center">

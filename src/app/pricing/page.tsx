@@ -77,7 +77,7 @@ export default function PricingPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(255, 245, 204)" }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -98,7 +98,7 @@ export default function PricingPage() {
             <p className="ow-lead mt-4 max-w-2xl text-[#2B3A33]">
               Choose at sign-up and switch any time from your profile.
             </p>
-          </Reveal>
+          </div>
         </section>
 
         {/* Pricing Cards Section */}

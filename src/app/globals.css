@@ -81,15 +81,17 @@ main, #main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   color: #12261A;
   letter-spacing: -0.015em;
   font-weight: 600;
   line-height: 1.06;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .font-heading, .font-\[Fredoka\], [class*="font-[Fredoka]"] {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 /* Container */
@@ -135,43 +137,47 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Typography */
 .ow-h1 {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.02em;
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(38px, 5.5vw, 68px);
   font-weight: 700 !important;
-  line-height: 1.02;
+  line-height: 1.04;
   color: #12261A;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 
 .ow-h1s {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.02em;
-  font-size: clamp(30px, 4.8vw, 60px);
+  font-size: clamp(28px, 4.5vw, 56px);
   font-weight: 700 !important;
-  line-height: 1.06;
+  line-height: 1.08;
   color: #12261A;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 
 .ow-h2 {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.02em;
-  font-size: clamp(32px, 4.4vw, 52px);
+  font-size: clamp(30px, 4.2vw, 48px);
   font-weight: 700 !important;
-  line-height: 1.06;
+  line-height: 1.08;
   color: #12261A;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .ow-h2f {
-  font-family: "Fredoka", var(--font-fredoka), var(--font-fredoka-fallback) !important;
+  font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.02em;
-  font-size: clamp(30px, 4vw, 46px);
+  font-size: clamp(28px, 3.8vw, 44px);
   font-weight: 700 !important;
-  line-height: 1.06;
+  line-height: 1.08;
   color: #12261A;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .ow-lead {
@@ -734,5 +740,51 @@ a.ow-card:hover,
 
 .duration-300 {
   animation-duration: 300ms;
+}
+
+/* Bulletproof Hero Text Fade-In */
+.ow-hero-fade {
+  animation: owHeroFade 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ow-hero-fade-1 {
+  animation-delay: 0.08s;
+}
+
+.ow-hero-fade-2 {
+  animation-delay: 0.16s;
+}
+
+.ow-hero-fade-3 {
+  animation-delay: 0.24s;
+}
+
+@keyframes owHeroFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion accessibility override - elements must ALWAYS be visible */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ow-hero-fade,
+  .animate-float,
+  .animate-in,
+  .fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 

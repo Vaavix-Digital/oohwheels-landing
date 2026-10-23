@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "#FFF5CC" }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -97,7 +97,7 @@ export default function TestimonialsPage() {
               Real stories from people who turned a stressful test into a
               confident pass.
             </p>
-          </Reveal>
+          </div>
         </section>
 
         {/* Stats banner */}

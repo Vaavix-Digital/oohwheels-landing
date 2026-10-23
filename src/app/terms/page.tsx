@@ -67,7 +67,7 @@ export default function TermsPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <Reveal className="ow-wrap">
+          <div className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -83,7 +83,7 @@ export default function TermsPage() {
             <span className="ow-label">Legal</span>
             <h1 className="ow-h1s max-w-3xl">Terms of use</h1>
             <span className="ow-chip mt-5">Last updated: October 18, 2026</span>
-          </Reveal>
+          </div>
         </section>
 
         {/* Content Section */}
