@@ -256,12 +256,12 @@ export const MainContent: React.FC = () => {
 
   // Auto-carousel timer (cycles every 5.2 seconds, pauses on hover)
   useEffect(() => {
-    if (isHeroPaused || shouldReduceMotion) return;
+    if (isHeroPaused) return;
     const timer = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % tabNames.length);
     }, 5200);
     return () => clearInterval(timer);
-  }, [isHeroPaused, shouldReduceMotion, tabNames.length]);
+  }, [isHeroPaused, tabNames.length]);
 
   // FAQ accordion open state
   const [openFaq, setOpenFaq] = useState<number>(0);
