@@ -153,7 +153,7 @@ export default function HelpPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap">
+          <Reveal className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -174,7 +174,7 @@ export default function HelpPage() {
             <p className="ow-lead mt-4 max-w-2xl text-[#2B3A33]">
               Search the help centre or pick a topic.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* Main Section */}

@@ -770,21 +770,13 @@ a.ow-card:hover,
   }
 }
 
-/* Reduced motion accessibility override - elements must ALWAYS be visible */
+/* Reduced motion safety - ensure opacity is never blocked */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .ow-hero-fade,
-  .animate-float,
-  .animate-in,
-  .fade-in {
+  .ow-hero-fade {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 }
+
 

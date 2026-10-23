@@ -30,7 +30,7 @@ export default function CountriesPage() {
           className="pb-14 pt-10 md:pb-20"
           style={{ background: "rgb(234, 248, 214)" }}
         >
-          <div className="ow-wrap">
+          <Reveal className="ow-wrap">
             <nav
               aria-label="Breadcrumb"
               className="ow-muted mb-6 flex flex-wrap items-center gap-1"
@@ -67,7 +67,7 @@ export default function CountriesPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-          </div>
+          </Reveal>
         </section>
 
         {/* Countries Grid */}
